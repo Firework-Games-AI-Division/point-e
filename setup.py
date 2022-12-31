@@ -4,9 +4,6 @@ import glob
 import os
 import subprocess
 import logging
-import torch
-from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
-# from Cython.Build import cythonize
 
 cwd = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,6 +18,9 @@ if torch_spec is None:
     )
 else:
     import torch
+
+import torch
+from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
 
 
 def get_cuda_bare_metal_version(cuda_dir):
