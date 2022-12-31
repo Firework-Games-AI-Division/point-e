@@ -19,9 +19,6 @@ if torch_spec is None:
 else:
     import torch
 
-import torch
-from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
-
 
 def get_cuda_bare_metal_version(cuda_dir):
     raw_output = subprocess.check_output([os.path.join(cuda_dir, "bin", "nvcc"), "-V"], universal_newlines=True)
@@ -48,6 +45,9 @@ def get_include_dirs():
     return include_dirs
 
 def get_extensions():
+    import torch
+    from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
+
     extra_compile_args = {'cxx': ['-O3']}
     define_macros = []
     include_dirs = []
