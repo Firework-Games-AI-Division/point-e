@@ -10,14 +10,14 @@ cwd = os.path.dirname(os.path.abspath(__file__))
 logger = logging.getLogger()
 logging.basicConfig(format='%(levelname)s - %(message)s')
 
-torch_spec = importlib.util.find_spec("torch")
-if torch_spec is None:
-    raise ImportError(
-        f"Kaolin requires PyTorch "
-        "but couldn't find the module installed."
-    )
-else:
-    import torch
+# torch_spec = importlib.util.find_spec("torch")
+# if torch_spec is None:
+#     raise ImportError(
+#         f"Kaolin requires PyTorch "
+#         "but couldn't find the module installed."
+#     )
+# else:
+#     import torch
 
 
 def get_cuda_bare_metal_version(cuda_dir):
