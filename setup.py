@@ -4,8 +4,12 @@ import glob
 import os
 import subprocess
 import logging
-
+import pip
 cwd = os.path.dirname(os.path.abspath(__file__))
+
+pip.main(['install', 'torch', 'torchvision', '--extra-index-url', 'https://download.pytorch.org/whl/cu117'])
+import torch
+from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
 
 logger = logging.getLogger()
 logging.basicConfig(format='%(levelname)s - %(message)s')
@@ -45,8 +49,6 @@ def get_include_dirs():
     return include_dirs
 
 def get_extensions():
-    import torch
-    from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
 
     extra_compile_args = {'cxx': ['-O3']}
     define_macros = []
