@@ -97,6 +97,7 @@ setup(
         "point_e.models",
         "point_e.util",
         "point_e.commands",
+        "point_e.util.dmtet"
     ],
     install_requires=[
         "filelock",
