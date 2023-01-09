@@ -101,7 +101,6 @@ setup(
     ],
     install_requires=[
         "filelock",
-        "Pillow",
         "fire",
         "humanize",
         "requests",
@@ -109,7 +108,6 @@ setup(
         "matplotlib",
         "scikit-image",
         "scipy",
-        "numpy",
         "clip @ git+https://github.com/Firework-Games-AI-Division/CLIP.git",
     ],
     ext_modules=get_extensions(),
