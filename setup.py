@@ -14,14 +14,6 @@ from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtensio
 logger = logging.getLogger()
 logging.basicConfig(format='%(levelname)s - %(message)s')
 
-# torch_spec = importlib.util.find_spec("torch")
-# if torch_spec is None:
-#     raise ImportError(
-#         f"Kaolin requires PyTorch "
-#         "but couldn't find the module installed."
-#     )
-# else:
-#     import torch
 
 
 def get_cuda_bare_metal_version(cuda_dir):
@@ -87,7 +79,7 @@ def get_extensions():
                                for x in extension.libraries]
 
     return extensions
-
+  
 setup(
     name="point-e",
     packages=[
