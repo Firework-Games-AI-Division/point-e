@@ -99,7 +99,6 @@ setup(
         "point_e.commands",
     ],
     install_requires=[
-        "torch",
         "filelock",
         "Pillow",
         "fire",
