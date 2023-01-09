@@ -110,7 +110,7 @@ setup(
         "scikit-image",
         "scipy",
         "numpy",
-        "clip @ git+https://github.com/openai/CLIP.git",
+        "clip @ git+https://github.com/Firework-Games-AI-Division/CLIP.git",
     ],
     ext_modules=get_extensions(),
     cmdclass={
