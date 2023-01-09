@@ -7,7 +7,7 @@ import logging
 import pip
 cwd = os.path.dirname(os.path.abspath(__file__))
 
-pip.main(['install', 'torch', 'torchvision', '--extra-index-url', 'https://download.pytorch.org/whl/cu117'])
+# pip.main(['install', 'torch', 'torchvision', '--extra-index-url', 'https://download.pytorch.org/whl/cu117'])
 import torch
 from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension, CUDA_HOME
 
