@@ -1,1 +1,1 @@
-include point_e/util/dmtet/*npz
+include point_e/util/dmtet/samples/*.npz
